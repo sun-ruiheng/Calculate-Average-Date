@@ -14,7 +14,7 @@ button.onclick = (event) => {
         month = input.slice(3, 5);
         year = input.slice(6, 10);
 
-        var num = Date.parse(`${year}-${day}-${month}`);
+        var num = Date.parse(`${year}-${month}-${day}`);
         // alert(`num: ${num}`);
         return num;
     };
@@ -39,7 +39,7 @@ button.onclick = (event) => {
     // alert(average)
 
     var date = new Date(average);
-    date = `${date.getUTCDate()}/${date.getUTCMonth()}/${date.getUTCFullYear()} and if you wanna get more specific it's also at ${date.getUTCHours()} hours. Assuming your inputs are at 0000H.`;
+    date = `${date.getUTCDate()}/${date.getUTCMonth()+1}/${date.getUTCFullYear()} and if you wanna get more specific it's also at ${date.getUTCHours()} hours. Assuming your inputs are at 0000H.`;
     // alert(date)
     document.getElementById('answer').innerHTML = date;
 }
